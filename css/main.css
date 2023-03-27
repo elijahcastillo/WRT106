@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Rubik&family=Ubuntu&display=swap");
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+:root {
+  --primary: #66bfff;
+  --secondary: #333333;
+  --error: #ce0606;
+  --success: #009070;
+  --white: #ffffff;
+
+  --blue-50: #e5f4ff;
+  --blue-100: #cceaff;
+  --blue-200: #99d4ff;
+  --blue-300: #66bfff;
+  --blue-400: #33aaff;
+  --blue-500: #0095ff;
+  --blue-600: #0077cc;
+  --blue-700: #005999;
+  --blue-800: #003b66;
+  --blue-900: #001e33;
+
+  --gray-50: #f2f2f3;
+  --gray-100: #e5e6e7;
+  --gray-200: #cacdce;
+  --gray-300: #b0b3b5;
+  --gray-400: #959a9d;
+  --gray-500: #7b8184;
+  --gray-600: #62676a;
+  --gray-700: #4a4d50;
+  --gray-800: #313435;
+  --gray-900: #181a1b;
+}
+
+/* To Top */
+.toTopWrapper {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  transition: all 500ms ease-in-out;
+}
+
+.toTop {
+  width: 50px;
+  height: 50px;
+  background-color: var(--blue-400);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.toTopTxt {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  color: var(--blue-400);
+}
+
+/* Hamburg */
+/*Hamburg Icon*/
+.hamburgContainer {
+  position: relative;
+  width: 32px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  display: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.hamburgLine,
+.hamburgLine::after,
+.hamburgLine::before {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.5s;
+}
+
+.hamburgLine::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+}
+
+.hamburgLine::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+}
+
+/* Navbar CSS */
+nav {
+  height: 55px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: all 500ms ease-in-out;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.on-page {
+  background-color: white;
+  box-shadow: 1px 1px 2px rgb(198, 196, 196);
+}
+
+.on-page > .hamburgContainer .hamburgLine,
+.on-page > .hamburgContainer .hamburgLine::after,
+.on-page > .hamburgContainer .hamburgLine::before {
+  background-color: black;
+}
+
+.on-page > .link-wrapper .nav-link {
+  color: black;
+}
+
+.on-page > .link-wrapper .nav-link:hover {
+  background-color: rgba(185, 184, 184, 0.388);
+}
+
+.link-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .nav-link {
+  padding: 5px 10px;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--gray-200);
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  font-size: 1.2em;
+}
+
+nav .nav-link:hover {
+  background-color: rgba(158, 158, 158, 0.388);
+  border-radius: 5px;
+}
+
+/* Top Intro */
+.intro-background {
+  /* The image used */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.612), rgba(0, 0, 0, 0.612)),
+    url("../assets/main.jpg");
+  /* background-image: url("../assets/main.jpg"); */
+
+  /* Full height */
+  height: 80%;
+
+  /* Add blur */
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-txt {
+  color: white;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 2em;
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Section */
+.section {
+  width: 100%;
+  min-height: 70%;
+  background-color: var(--white);
+  padding: 50px 60px;
+  font-family: "Inter", sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: bold;
+
+  /* text-decoration: underline; */
+  padding-top: 20px;
+}
+
+.section-container {
+  margin-top: 50px;
+  display: flex;
+  gap: 50px;
+}
+
+.section-text {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+.section-media {
+  flex: 1;
+  width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  display: grid;
+  place-items: cENTER;
+}
+
+/* Phone */
+@media screen and (max-width: 800px) {
+  .section-container {
+    flex-direction: column;
+  }
+
+  .section-text {
+    text-align: left;
+  }
+
+  .background-txt {
+    font-size: 1.5em;
+  }
+
+  /* Navbar */
+  nav {
+    justify-content: flex-end;
+    padding-right: 30px;
+  }
+
+  .link-wrapper {
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+
+    position: fixed;
+    top: 0;
+    transform: translateX(1000px);
+    z-index: 150;
+    flex-direction: column;
+    color: black;
+    gap: 0;
+    transition: transform 200ms;
+  }
+
+  nav .link-wrapper .nav-link {
+    color: black;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .small_menu {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .small_menu .link-wrapper {
+    transform: translateX(30px);
+  }
+
+  .small_menu .mask {
+    position: fixed;
+    width: 100%;
+    height: 200vh;
+    background-color: rgba(0, 0, 0, 0.452);
+    cursor: pointer;
+  }
+
+  .hamburgContainer {
+    display: flex;
+  }
+}
