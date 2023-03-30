@@ -4,6 +4,7 @@ let nav_links = document.querySelectorAll(".nav-link");
 let toTop = document.getElementById("toTop");
 let hamburg = document.getElementById("hamburg");
 let mask = document.getElementById("mask");
+let more = document.querySelectorAll("#more-info");
 
 navbar.classList.remove("on-page");
 toTop.style.opacity = "0";
@@ -37,3 +38,10 @@ window.addEventListener("scroll", () => {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+console.log(more);
+more.forEach((section) => {
+  section.addEventListener("click", () => {
+    section.classList.toggle("active");
+  });
+});
