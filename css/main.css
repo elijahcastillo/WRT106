@@ -230,8 +230,10 @@ nav .nav-link:hover {
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 20px;
   align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .section-links {
