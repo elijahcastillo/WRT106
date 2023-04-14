@@ -254,6 +254,11 @@ nav .nav-link:hover {
   transition: all 400ms;
 }
 
+.subHeader {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
 .active #section-links-arrow {
   transform: rotate(180deg);
 }
